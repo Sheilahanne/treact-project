@@ -101,16 +101,31 @@ LANDING
 
 */
 
-.about__us {
+.illustration,
+.info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  flex: 0 0 40%;
   width: 100%;
   height: 100%;
+  margin: 0 48px;
 }
 
-.landing__img {
+.illustration {
+  flex: 0 0 40%;
+}
+
+.landing__img--wrapper,
+.info__img--wrapper,
+.steps__img--wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 48px;
+}
+
+.landing__img,
+.info__img {
   width: 100%;
   height: auto;
   display: block;
@@ -122,14 +137,15 @@ LANDING
 }
 
 .section__title {
-  font-size: 40px;
-  margin: 17px 0 17px 0;
+  font-size: 50px;
+  margin: 25px 0;
 }
 
 .section__title--description {
   align-items: flex-start;
   font-size: 17px;
   margin-bottom: 17px;
+  line-height: 1.5;
 }
 
 .input__container {
@@ -150,7 +166,7 @@ input {
 
 .signup__btn__landing {
   display: flex;
-  margin-left: 124px;
+  margin-left: 120px;
 }
 
 .company__logo-strip {
@@ -180,23 +196,25 @@ FEATURES
 
 */
 
-.row__narrow {
+.narrow {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.section__title--header {
+.section__title--header,
+.section__title--subheader {
   display: flex;
-  justify-content: center;
   font-size: 16px;
   margin-top: 100px;
+  font-weight: 800;
+  font-size: 15px;
 }
 
-.section__title--features {
+.section__title--subtitle {
   display: flex;
   justify-content: center;
-  font-size: 40px;
+  font-size: 50px;
   margin: 16px 0;
 }
 
@@ -265,3 +283,78 @@ FEATURES
   color: rgb(83, 80, 80);
 }
 
+/*
+
+INFORMATION
+
+*/
+
+.even {
+  flex: 0 0 50%;
+}
+
+.info__img {
+  display: flex;
+  border: 1px solid rgba(128, 128, 128, 0.215);
+  border-radius: 4px;
+  margin-top: 30px;
+}
+
+/*
+
+STEPS
+
+*/
+
+.steps__img {
+  display: flex;
+  flex: 0 0 50%;
+  max-width: 100%;
+  margin-top: 100px;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.step {
+  display: flex;
+}
+
+.step__number {
+  display: flex;
+  flex-direction: center;
+ justify-content: flex-start;
+  margin: 12px 0;
+  padding: 8px;
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.155);
+}
+
+.step__description--wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 360px;
+  margin: 12px;
+  padding: 8px;
+}
+
+.step__description {
+  font-weight: 800;
+  font-size: 17px;
+}
+
+.step__description--para {
+  color: rgba(0, 0, 0, 0.734);
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 7px;
+}
+
+.section__title--subheader {
+  display: flex;
+  justify-content: center;
+}
