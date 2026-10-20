@@ -75,10 +75,11 @@ li {
 }
 
 .signup__btn {
+  font-size: 20px;
   background-color: #6415ff;
   padding: 10px 20px;
   margin: auto;
-  border-radius: 20px;
+  border-radius: 25px;
   border: none;
 }
 
@@ -239,7 +240,7 @@ FEATURES
 .services {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 200px 0 200px;
+
 }
 
 .service {
@@ -277,7 +278,7 @@ FEATURES
 
 .service__description--para {
   width: 100%;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 2.2;
   margin-top: 7px;
   color: rgb(83, 80, 80);
@@ -298,8 +299,21 @@ INFORMATION
   border: 1px solid rgba(128, 128, 128, 0.215);
   border-radius: 4px;
   margin-top: 30px;
-}
-
+  }
+  
+  .quality__grid {
+    transform: translateX(50%) translateY(50%) scaleX(1) scaleY(1);
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    fill: rgb(100, 21, 255);
+    --tw-text-opacity: 1;
+    color: rgba(100, 21, 255, var(--tw-text-opacity));
+    z-index: 0;
+    display: block;
+  }
 /*
 
 STEPS
@@ -358,6 +372,94 @@ STEPS
   display: flex;
   justify-content: center;
 }
+
+/*
+
+VALUES
+
+*/
+
+#values .container {
+  gap: 16px;
+}
+
+.values__description {
+  padding: 32px 64px 32px 0;
+}
+
+#values .info__img {
+  margin-top: 100px;
+  border: none;
+}
+
+.principles {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.principle {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 360px;
+  margin: 24px 24px 0 0;
+}
+
+.principles__img--wrapper {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+}
+
+.principle:nth-child(1) .principles__img--wrapper {
+  background: #9ae6b4;
+}
+
+.principle:nth-child(2) .principles__img--wrapper {
+  background: #feb2b2;
+}
+
+.principles__img {
+  width: 20px;
+  height: 20px;
+}
+
+.principle .principles__description , .principle .principles__img--wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  margin-right: 24px;
+}
+
+.principle__top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  margin-right: 24px;
+}
+
+.principles__description {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.principles__description--para {
+  font-size: 16px;
+  color: #718096;
+  line-height: 1.5;
+  margin-top: 7px;
+}
+
+.principle__bottom {
+  margin-top: 32px;
+}
+
 
 /*
 
@@ -434,7 +536,7 @@ SUBSCRIPTIONS
 
 .subscription:nth-child(2) {
   color: #f7fafc;
-  background: linear-gradient(115deg, rgb(100, 21, 255) 0%, rgb(185, 150, 255) 100%);
+  background: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
 }
 
 .subscription:nth-child(2) .btn__buy {
