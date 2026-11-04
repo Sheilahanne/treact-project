@@ -7,6 +7,13 @@
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  color: #243e63;
+}
+button {
+  cursor: pointer;
+  border: none;
+}
 
 .container {
   display: flex;
@@ -25,6 +32,12 @@
   display: flex;
   flex-direction: column;
 }
+
+/*
+
+NAV
+
+*/
 
 .nav__bar {
   display: flex;
@@ -52,7 +65,22 @@
 }
 
 .nav__link {
-  color: black;
+  font-size: 14px;
+  font-weight: 600;
+  padding-top: 4px;
+  letter-spacing: 0.35px;
+  border-bottom: 2px solid transparent;
+  position: relative;
+  transition: border-color 0.3s ease;
+}
+
+.nav__link:hover {
+  border-bottom-color: #6415ff;
+  transition: 300ms;
+}
+
+a {
+  display: inline;
   text-decoration: none;
   gap: 12px;
 }
@@ -76,18 +104,25 @@ li {
   margin-left: 20px;
 }
 
-.signup__btn {
+.signup__btn,
+.input__email--btn {
   font-size: 16px;
   background-color: #6415ff;
   padding: 10px 20px;
   margin: auto;
   border-radius: 25px;
   border: none;
+  transition: background ;
 }
 
 .signup__link {
   color: white;
   text-decoration: none;
+}
+
+.signup__btn:hover {
+  background-color: #5011cc;
+  transition: background-color 0.3s ease;
 }
 
 .logo__name {
@@ -153,23 +188,49 @@ LANDING
 }
 
 .input__container {
+  width: 100%;
+  max-width: 448px;
+  height: 68px;
+  position: relative;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  margin-bottom: 17px;
-  border: solid 1px #6415ff;
-  border-radius: 24px;
-  padding: 2px;
 }
 
-input {
-  border: none;
-  border-radius: 4px;
-  margin-left: 12px;
+.input__email {
+  width: 100%;
+  border-radius: 500px;
+  border: 2px solid rgb(229, 231, 235);
+  padding: 10px 192px 10px 32px;
+  color: rgb(36, 62, 99);
+  font-size: 16px;
+  font-weight: 500;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  transition: border-color 300ms;
 }
 
-.signup__btn__landing {
-  display: flex;
-  margin-left: 120px;
+.input__email--btn {
+  z-index: 2;
+  margin: 8px;
+  height: calc(100% - 16px);
+  transition: all 300ms ease;
+}
+
+.input__email--btn:hover {
+  background-color: #3c0d99;
+}
+
+.input__email:hover {
+  border-color: #a0aec0;
+}
+
+.input__email:focus,
+.input__email:active {
+  outline: none;
+  border-color: #6415ff;
 }
 
 .company__logo-strip {
@@ -498,7 +559,6 @@ SUBSCRIPTIONS
   margin-right: 2rem;
   margin-top: 0.5rem;
   text-align: center;
-  color: rgb(26, 32, 44);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px 0px, rgba(0, 0, 0, 0.1) 0px 4px 10px 0px, rgba(0, 0, 0, 0.1) 0px 4px 10px 0px;
 }
 
@@ -539,12 +599,11 @@ SUBSCRIPTIONS
 
 .subscription:nth-child(1) .subscription__stripe,
 .subscription:nth-child(1) .btn__buy {
-  color: #f7fafc;
   background: linear-gradient(115deg, #38b2ac 0%, #81e6d9 100%);
 }
 
 .subscription:nth-child(2) {
-  color: #f7fafc;
+  color: #f7fafc !important;
   background: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
 }
 
@@ -555,7 +614,6 @@ SUBSCRIPTIONS
 
 .subscription:nth-child(3) .subscription__stripe,
 .subscription:nth-child(3) .btn__buy {
-  color: #f7fafc;
   background: linear-gradient(115deg, rgba(245, 101, 101) 0%, rgba(254, 178, 178) 100%);
 }
 
@@ -576,7 +634,6 @@ SUBSCRIPTIONS
 }
 
 .subscription__price  {
-  
   font-weight: 800;
   font-size: 2.5rem;
 }
@@ -598,10 +655,17 @@ SUBSCRIPTIONS
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 12px 32px;
+  padding: 14px 54px;
   border-radius: 28px;
+  color: #f7fafc;
+  font-size: 18px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border: none;
+  transition: transform 300ms ease;
+}
+
+.btn__buy:hover {
+  transform: translate(3px, -3px)
 }
 
 /*
@@ -691,11 +755,16 @@ TESTIMONIALS
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   border: none;
   background-color: #edf2f7;
+  transition: all 300ms ease;
+}
+
+.testimonial__button:hover {
+  background-color: #e5e7eb;
 }
 
 .divider {
@@ -809,10 +878,21 @@ START
   background: #f56565;
   box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   margin-right: 32px;
+  transition: all 300ms ease;
+}
+
+.start__button:nth-child(1):hover {
+  background-color: #e53e3e;
 }
 
 .start__button:nth-child(2) {
   border: 1px solid rgb(160, 174, 192);
+  transition: all 300ms ease;
+}
+
+.start__button:nth-child(2):hover {
+  background-color: #f7fafc;
+  color: #6415ff;
 }
 
 
@@ -893,6 +973,15 @@ footer .row {
   margin-top: 24px;
   font-size: 20px;
   font-weight: 500;
+  border-bottom: 2px solid transparent;
+  position: relative;
+  transition: border-color 0.3s ease;
+  max-width: max-content;
+}
+
+.footer__column--link:hover {
+  border-bottom-color: #f7fafc;
+  transition: 300ms;
 }
 
 .footer__divider {
@@ -948,6 +1037,11 @@ footer .row {
   background-color: #f7fafc;
   margin-left: 10px;
   padding: 16px;
+  transition: all 300ms ease;
+}
+
+.footer__social--link:hover {
+  background-color: #e2e8f0;
 }
 
 .footer__social--link svg {
